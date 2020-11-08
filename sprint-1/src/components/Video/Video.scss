@@ -1,9 +1,46 @@
-.video {
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typography' as *;
+
+
+.main__video {
     width: 100%;
     height: 11.4375rem;
+    padding: 0;
 
-    &__playing {
+    @include tablet {
+        height: 25rem;
+    }
+
+    @include desktop {
+        height: 33.75rem;
+    }
+
+    &-container {
         width: 100%;
+        height: 11.4375rem;
+
+        @include tablet {
+            height: 25rem;
+            background-color: $primary-black;
+        }
+
+        @include desktop {
+            height: 33.75rem;
+        }
+    }
+
+    &-playing {
+        width: 100%;
+        height: 100%;
+
+        @include tablet {
+            padding: 0 2.125rem;
+        }
+
+        @include desktop {
+            padding: 0 10.5rem;
+        }
 
     }
 }
