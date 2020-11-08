@@ -6,9 +6,6 @@ import VideoDetails from './components/VideoDetails/VideoDetails';
 import { mainVideo, sideVideo} from './utils/data';
 
 
-
-
-
 class App extends Component {
   state = {
     mainVideo: mainVideo,
@@ -22,8 +19,8 @@ class App extends Component {
     return (
         <div className="app">
           <Header  />
-          <Video />  
-          <VideoDetails />  
+          <Video mainVideo={this.state.mainVideo}/>  
+          <VideoDetails  mainVideo={this.state.mainVideo}/>  
         </div>
     );
   }

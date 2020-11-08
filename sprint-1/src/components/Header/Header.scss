@@ -39,17 +39,23 @@
         flex-direction: row;
         align-items: center;
     }
+
+    @include desktop {
+
+    }
+
+    &__left {
+        margin: 1rem 0;
+     
+        @include tablet {
+            width: 40%;
+            margin-right: 169px;
+         
+        }
+     }
 }
 
-.header__left {
-   margin: 1rem 0;
 
-   @include tablet {
-       width: 40%;
-       margin-right: 169px;
-    
-   }
-}
 
 .header__logo {
     height: 100%;

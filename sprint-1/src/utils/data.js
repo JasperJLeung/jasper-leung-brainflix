@@ -69,7 +69,7 @@ const mainVideo = {
     likes: '110,985',
     duration: '0:42',
     video: videoFile,
-    timestamp: '0:00',
+    timestamp: '12/18/2018',
     comments: [
         {
           id: 0,
