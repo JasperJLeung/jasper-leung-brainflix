@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Video from './components/Video/Video';
 import Comments from './components/Comments/Comments';
+import VideoQueue from './components/VideoQueue/VideoQueue';
 import './App.css';
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import { mainVideo, sideVideo} from './utils/data';
@@ -23,6 +24,7 @@ class App extends Component {
           <Video mainVideo={this.state.mainVideo}/>  
           <VideoDetails  mainVideo={this.state.mainVideo}/>  
           <Comments mainVideo={this.state.mainVideo}/> 
+          <VideoQueue sideVideo={this.state.sideVideo}/>
         </div>
     );
   }
