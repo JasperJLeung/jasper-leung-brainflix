@@ -6,8 +6,6 @@ const NextVideo = (props) => {
             <img src={props.video.image} alt={props.video.title}/>
             {props.video.title}
             {props.video.channel}
-
-            
         </div>
     );
 };

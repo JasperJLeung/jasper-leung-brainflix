@@ -1,4 +1,4 @@
-
+import './Video.scss';
 const Video = (props) => {
     return (
         <section className="video">
