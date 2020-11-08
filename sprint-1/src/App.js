@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Video from './components/Video/Video';
+import Comments from './components/Comments/Comments';
 import './App.css';
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import { mainVideo, sideVideo} from './utils/data';
@@ -21,6 +22,7 @@ class App extends Component {
           <Header  />
           <Video mainVideo={this.state.mainVideo}/>  
           <VideoDetails  mainVideo={this.state.mainVideo}/>  
+          <Comments mainVideo={this.state.mainVideo}/> 
         </div>
     );
   }
