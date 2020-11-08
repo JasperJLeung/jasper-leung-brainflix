@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Header from './components/Header/Header';
+import Video from './components/Video/Video';
 import './App.css';
+import VideoDetails from './components/VideoDetails/VideoDetails';
+import { mainVideo, sideVideo} from './utils/data';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+class App extends Component {
+  state = {
+    mainVideo: mainVideo,
+    sideVideo: sideVideo
+  }
+
+  
+  
+  render() {
+    console.log(this.state.mainVideo, this.state.sideVideo)
+    return (
+        <div className="app">
+          <Header  />
+          <Video />  
+          <VideoDetails />  
+        </div>
+    );
+  }
 }
 
 export default App;
+
+
+
+
+
