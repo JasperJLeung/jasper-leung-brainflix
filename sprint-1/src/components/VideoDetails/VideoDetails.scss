@@ -37,7 +37,7 @@
           padding: 2rem 0 1rem 0;
 
           @include tablet {
-              padding: 3rem 0 1.5rem 0;
+              padding: 0 0 1.5rem 0;
           }
       }
 
@@ -64,10 +64,10 @@
           width: 100%;
           display: flex;
           align-items: center;
-          padding-bottom: 3rem;
+          padding-bottom: 2rem;
 
           @include tablet {
-              padding-bottom: 4rem;
+              padding-bottom: 1.5rem;
           }
 
       }
@@ -100,7 +100,7 @@
           width: 100%;
           display: flex;
           align-items: center;
-          padding-bottom: 3rem;
+          padding-bottom: 1.5rem;
 
           @include tablet {
               justify-content: flex-end;
@@ -127,9 +127,9 @@
               line-height: 24px;
           }
       }
-
-      &__likes-icon {
-          padding-right: 0.5rem;
+      &__info-container-right {
+          display: flex;
+          align-items: center;
       }
 
       &__likes {
@@ -142,11 +142,18 @@
             line-height: 24px;
         }
       }
+      
+      &__likes-icon {
+          padding-right: 0.5rem;
+      }
 
+      &__linebreak{
+          color: $primary-mercury;
+          margin-bottom: 1.5rem;
 
-      &__info-container-right {
-          display: flex;
-          align-items: center;
+          @include tablet {
+              margin-bottom: 2.5rem;
+          }
       }
 
       &__description-container {
@@ -156,11 +163,20 @@
           @include tablet {
               width: 70%;
           }
+
+          @include desktop {
+              width: 75%;
+          }
       }
 
       &__description {
           font-family: $font-regular;
           font-size: 13px;
           line-height: 18px;
+
+          @include tablet {
+              font-size: 14px;
+              line-height: 22px;
+          }
       }
   }

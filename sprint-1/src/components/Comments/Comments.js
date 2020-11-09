@@ -11,7 +11,7 @@ const Comments = (props) => {
         <section className="comment">
             <p className="comment__number">3 Comments</p>
             <div className="comment__header">
-                <p className="comment__header-text">Join the Conversation</p>
+                <p className="comment__header-text">JOIN THE CONVERSATION</p>
             </div>
             <div className="comment__container">
                 <div className="comment__left">
@@ -19,13 +19,14 @@ const Comments = (props) => {
                 </div>
                 <form className="comment__form">
                     <div className="comment__input">
-                        <textarea name="comment" className="comment__comment" placeholder="Add a comment" rows="4" required></textarea>
+                        <textarea name="comment" className="comment__comment" placeholder="Write comment here" rows="4" required></textarea>
                     </div>
                     <div className="comment__button-container">
                         <button type="submit" className="comment__button">COMMENT</button>
                     </div>
                 </form>
             </div>
+            <hr className="comment__linebreak"/>
             {comment}
         </section>
     );

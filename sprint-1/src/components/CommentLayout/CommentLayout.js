@@ -3,7 +3,7 @@ import "./CommentLayout.scss";
 
 const CommentLayout = (props) => {
   return (
-    <div>
+    <div className="comment__section-container">
       <div className="comment__posted">
         <div className="comment__posted-avatar-container">
           <div className="comment__posted-avatar"></div>

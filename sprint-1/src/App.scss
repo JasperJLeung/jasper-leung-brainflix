@@ -27,8 +27,19 @@
         display: flex;
         flex-direction: column;
 
+        @include tablet {
+            padding-top: 3rem;
+        }
+
         @include desktop {
             flex-direction: row;
+            padding: 2.5rem 6.25rem 0 6.25rem;
+        }
+    }
+
+    &__bottom-container-section {
+        @include desktop {
+            padding-right: 2rem;
         }
     }
   }

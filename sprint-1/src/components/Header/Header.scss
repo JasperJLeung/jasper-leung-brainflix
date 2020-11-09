@@ -86,6 +86,8 @@
         font-size: 13px;
         line-height: 18px;
         padding-left: 2rem;
+        border: 1px solid $primary-mercury;
+        border-radius: 5px;
         
 
         @include tablet {
@@ -103,6 +105,11 @@
         position: absolute;
         top: 0.625rem;
         left: 0.625rem;
+
+        @include tablet {
+            top: 0.9rem;
+            bottom: 0.9rem;
+        }
     }
 
     &__right {

@@ -26,23 +26,34 @@
       width: 100%;
       padding: 0 1rem;
 
+      @include tablet {
+          padding: 0 1.5rem;
+      }
+
 
       &__number {
         font-family: $font-demi;
         font-size: 14px;
         line-height: 22px;
+        padding-bottom: 2rem;
       }
 
       &__header {
           text-align: center;
+          padding: 0 0 0.3rem 0;
+          display: flex;
+          justify-content: center;
+
+          @include tablet {
+              justify-content: flex-start;
+          }
       }
 
       &__header-text {
-          font-family: $font-regular;
-          font-size: 14px;
-          line-height: 22px;
+          font-family: $font-demi;
+          font-size: 12px;
+          line-height: 20px;
           color: $primary-silver;
-          
       }
 
       &__container {
@@ -50,10 +61,8 @@
           justify-content: space-between;
       }
 
-      &__comment__left {
-          flex: 20%;
+      &__left {
           padding-right: 1rem;
-          margin-right: 1rem;
       }
 
       &__image {
@@ -65,11 +74,26 @@
       &__form {
           width: 100%;
           flex: 80%;
+
+          @include tablet {
+              display: flex;
+             
+          }
       }
 
       &__input {
           width: 100%;
           padding-bottom: 1rem;
+
+          @include tablet {
+            width: 27.5rem;
+            margin-right: 1rem;
+            padding-bottom: 1.5rem;
+          }
+
+          @include desktop {
+              width: 27.25rem;
+          }
       }
 
       &__comment {
@@ -78,13 +102,22 @@
           font-family: $font-regular;
           font-size: 13px;
           line-height: 18px;
-          border-color: $primary-silver;
+          border: 1px solid $primary-silver;
         //   border: 2px solid $primary-blue;
           border-radius: 5px;
+
+          @include tablet {
+              height: 3rem;
+          }
       }
 
       &__button-container {
           width: 100%;
+          padding-bottom: 1.5rem;
+
+          @include tablet {
+              width: 10rem;
+          }
       }
 
       &__button {
@@ -97,5 +130,9 @@
           font-family: $font-demi;
           padding-bottom: 1.5rem;
           text-align: center;
+
+          @include tablet {
+              height: 3rem;
+          }
       }
   }

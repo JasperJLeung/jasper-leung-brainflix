@@ -33,6 +33,7 @@ const VideoDetails = (props) => {
           </div>
         </div>
       </div>
+      <hr className="video__linebreak"/>
       <div className="video__description-container">
         <p className="video__description">{props.mainVideo.description}</p>
       </div>
