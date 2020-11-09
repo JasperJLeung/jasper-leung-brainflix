@@ -43,13 +43,12 @@
       }
 
       &__header {
-          text-align: center;
           padding: 0 0 0.3rem 0;
           display: flex;
-          justify-content: center;
 
           @include tablet {
-              justify-content: flex-start;
+              
+
           }
       }
 
@@ -81,6 +80,7 @@
 
           @include tablet {
               display: flex;
+              flex-direction: column;
              
           }
       }
@@ -138,5 +138,12 @@
           @include tablet {
               height: 3rem;
           }
+      }
+
+      &__linebreak {
+        height: 2px;
+        color: $primary-mercury;
+        background-color: $primary-mercury;
+        border: none;
       }
   }

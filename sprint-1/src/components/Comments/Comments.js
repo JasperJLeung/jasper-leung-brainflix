@@ -10,14 +10,15 @@ const Comments = (props) => {
     return (
         <section className="comment">
             <p className="comment__number">3 Comments</p>
-            <div className="comment__header">
-                <p className="comment__header-text">JOIN THE CONVERSATION</p>
-            </div>
+            
             <div className="comment__container">
                 <div className="comment__left">
                     <img className="comment__image" src= {profilePic} alt="profile" />
                 </div>
                 <form className="comment__form">
+                    <div className="comment__header">
+                        <p className="comment__header-text">JOIN THE CONVERSATION</p>
+                    </div>
                     <div className="comment__input">
                         <textarea name="comment" className="comment__comment" placeholder="Write comment here" rows="4" required></textarea>
                     </div>

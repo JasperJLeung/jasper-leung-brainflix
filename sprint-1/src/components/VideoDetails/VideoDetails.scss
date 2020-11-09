@@ -95,8 +95,8 @@
           color: $primary-silver;
 
           @include tablet {
-              font-size: 16px;
-              line-height: 24px;
+              font-size: 14px;
+              line-height: 22px;
           }
       }
 
@@ -127,8 +127,8 @@
           line-height: 18px;
 
           @include tablet {
-              font-size: 16px;
-              line-height: 24px;
+              font-size: 14px;
+              line-height: 22px;
           }
       }
       &__info-container-right {
@@ -142,8 +142,8 @@
         line-height: 18px;
 
         @include tablet {
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 14px;
+            line-height: 22px;
         }
       }
       
