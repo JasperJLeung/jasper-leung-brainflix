@@ -152,7 +152,10 @@
       }
 
       &__linebreak{
+          height: 2px;
           color: $primary-mercury;
+          background-color: $primary-mercury;
+          border: none;
           margin-bottom: 1.5rem;
 
           @include tablet {

@@ -19,11 +19,13 @@ const Comments = (props) => {
                     <div className="comment__header">
                         <p className="comment__header-text">JOIN THE CONVERSATION</p>
                     </div>
-                    <div className="comment__input">
-                        <textarea name="comment" className="comment__comment" placeholder="Write comment here" rows="4" required></textarea>
-                    </div>
-                    <div className="comment__button-container">
-                        <button type="submit" className="comment__button">COMMENT</button>
+                    <div className="comment__fields">
+                        <div className="comment__input">
+                            <textarea name="comment" className="comment__comment" placeholder="Write comment here" rows="4" required></textarea>
+                        </div>
+                        <div className="comment__button-container">
+                            <button type="submit" className="comment__button">COMMENT</button>
+                        </div>
                     </div>
                 </form>
             </div>

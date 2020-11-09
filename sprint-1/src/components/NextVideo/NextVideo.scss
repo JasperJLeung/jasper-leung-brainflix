@@ -26,6 +26,10 @@
   display: flex;
   padding-bottom: 1.5rem;
 
+  @include tablet {
+      width: 21.875rem;
+  }
+
   &__image-container {
     width: 7.5rem;
     height: 4.375rem;

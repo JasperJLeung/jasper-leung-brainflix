@@ -66,6 +66,7 @@
 
       &__left {
           padding-right: 1rem;
+          margin-top: 1.5rem;
       }
 
       &__image {
@@ -81,7 +82,12 @@
           @include tablet {
               display: flex;
               flex-direction: column;
-             
+          }
+      }
+
+      &__fields {
+          @include tablet {
+              display: flex;
           }
       }
 
