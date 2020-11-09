@@ -16,7 +16,7 @@ const CommentLayout = (props) => {
           <div className="comment__posted-text">{props.comment.comment}</div>
         </div>
       </div>
-      <hr />
+      <hr className="comment__section-linebreak"/>
     </div>
   );
 };

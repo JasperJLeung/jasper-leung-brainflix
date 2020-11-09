@@ -17,19 +17,19 @@ const sideVideo = [
     image: videoList0
 },{
     id: '1', 
-    title: 'Become A Travel Pro In One Easy Lesson...', 
-    channel: 'Scotty Cranmer', 
+    title: 'Become A Travel Pro In One Easy Lesson', 
+    channel: 'Todd Welch', 
     image: videoList1 
 },{
     id: '2', 
-    title: 'Les Houches The Hidden Gem Of The...', 
-    channel: 'Scotty Cranmer', 
+    title: 'Les Houches The Hidden Gem Of The Chamonix', 
+    channel: 'Cornelia Blair', 
     image: videoList2
 },{
 
     id: '3', 
-    title: 'Travel Health Useful Medical Information...', 
-    channel: 'Scotty Cranmer', 
+    title: 'Travel Health Useful Medical Information For', 
+    channel: 'Glen Harper', 
     image: videoList3
 },{
     id: '4', 
@@ -81,7 +81,7 @@ const mainVideo = {
         {
           id: 1,
           name: "Gary Wong",
-          date: "12/12/2018",
+          date: "12/18/2018",
           comment:
             "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He's so talented! I wish I can ride like him one day so I can really enjoy myself!",
         },

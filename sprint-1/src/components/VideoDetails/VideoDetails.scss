@@ -31,6 +31,10 @@
           padding: 0 1.5rem;
       }
 
+      @include desktop {
+          padding: 0;
+      }
+
 
       &__title-container {
           width: 100%;
