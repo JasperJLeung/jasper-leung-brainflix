@@ -4,15 +4,28 @@ import Video from '../../components/Video/Video';
 import Comments from '../../components/Comments/Comments';
 import VideoQueue from '../../components/VideoQueue/VideoQueue';
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
-import { mainVideo, sideVideo} from '../../utils/data';
-
+import axios from 'axios';
+import {apiKey, apiURL} from "../../utils/axios";
 
 class Home extends Component {
   state = {
-    mainVideo: mainVideo,
-    sideVideo: sideVideo
+    mainVideo: {},
+    sideVideo: []
   }
 
+  componentDidMount () {
+    axios.get(apiURL + "/videos?api_key=" + apiKey).then((response) => {
+      this.setState({
+        sideVideo: response.data
+      }, () => {
+        axios.get(apiURL + "/videos/" + this.state.sideVideo[0].id +"?api_key=" + apiKey).then((response) => {
+          this.setState({
+            mainVideo: response.data
+          })
+        })
+      })
+    }).catch((error) => console.log(error))
+  }
 
   render() {
     return (

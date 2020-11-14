@@ -4,9 +4,10 @@ import NextVideo from '../NextVideo/NextVideo';
 import './VideoQueue.scss';
 
 const VideoQueue = (props) => {
-    const video = props.sideVideo.map((video) => {
-        if(video.id !== sideVideo[0].id) 
-        return <NextVideo key={video.id} video={video}/>
+    const video = props.sideVideo.filter((eachVideo) => {
+return eachVideo.id !== props.mainVideo.id
+    }).map((video) => {
+        if(video.id !== sideVideo[0].id) return <NextVideo key={video.id} video={video}/>
     })
     return (
         <div className="video__queue">
