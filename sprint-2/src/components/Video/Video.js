@@ -14,15 +14,15 @@ const Video = (props) => {
         ></video>
         <div className="main__video-controls-container">
           <div className="main__video-play-container">
-            <img className="main__video-play" src={play}></img>
+            <img className="main__video-play" src={play} alt="play"></img>
           </div>
           <div className="main__video-scrubber-container">
             <progress className="main__video-scrubber" min="0" value="0"></progress>
             <span className="main__video-duration">0:00/{props.mainVideo.duration}</span>
           </div>
           <div className="main__video-image-container">
-            <img className="main__video-fullscreen" src={fullscreen}></img>
-            <img className="main__video-volume" src={volume}></img>
+            <img className="main__video-fullscreen" src={fullscreen} alt="play"></img>
+            <img className="main__video-volume" src={volume} alt="play"></img>
           </div>
         </div>
       </div>

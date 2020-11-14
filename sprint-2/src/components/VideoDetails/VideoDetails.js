@@ -3,7 +3,6 @@ import likesIcon from "../../assets/Icons/SVG/Icon-likes.svg";
 import "./VideoDetails.scss";
 
 const VideoDetails = (props) => {
-  console.log(props);
   return (
     <section className="video">
       <div className="video__title-container">
@@ -12,7 +11,7 @@ const VideoDetails = (props) => {
       <div className="video__subinfo-container">
         <div className="video__creator-date-container">
           <p className="video__creator">By {props.mainVideo.channel}</p>
-          <p className="video__date">{props.mainVideo.timestamp}</p>
+          <p className="video__date">{new Date(props.mainVideo.timestamp).toLocaleDateString()}</p>
         </div>
         <div className="video__views-likes">
           <div className="video__info-container-left">
