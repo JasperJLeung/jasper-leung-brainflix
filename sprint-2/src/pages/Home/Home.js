@@ -27,6 +27,24 @@ class Home extends Component {
     }).catch((error) => console.log(error))
   }
 
+  componentDidUpdate() {
+    if(this.props.match.params.id  && this.props.match.params.id !== this.state.mainVideo.id){
+      axios.get(apiURL + "/videos/" + this.props.match.params.id +"?api_key=" + apiKey).then((response) => {
+        this.setState({
+          mainVideo: response.data
+        })
+      }) 
+      window.scrollTo(0,0)
+    }
+     if(this.props.match.path === "/" && this.state.mainVideo.id !== this.state.sideVideo[0].id){
+      axios.get(apiURL + "/videos/" + this.state.sideVideo[0].id +"?api_key=" + apiKey).then((response) => {
+        this.setState({
+          mainVideo: response.data
+        })
+      }) 
+    }
+  } 
+
   render() {
     return (
         <div className="app">

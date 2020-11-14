@@ -9,6 +9,7 @@ const App = () => {
          <Switch>
            <Route path="/" exact component={Home}/>
            <Route path="/upload" component={Upload}/>
+           <Route path="/:id" component={Home}/>
         </Switch>
       </BrowserRouter>
       
