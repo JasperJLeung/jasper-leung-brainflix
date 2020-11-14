@@ -2,9 +2,13 @@ import React from 'react';
 
 const UploadForm = (props) => {
 
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        props.onSubmitForm(event)
+    };
     return (
         <div className="uploadInfo"> 
-            <form className="upload__form">
+            <form className="upload__form" onSubmit={handleSubmit}>
                     <p className="comment__header">JOIN THE CONVERSATION</p>
                     <div className="upload__fields">
                         <div className="upload__input-container">

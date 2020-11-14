@@ -20,9 +20,9 @@ class Header extends Component {
           </div>
         </div>
         <div className="header__right">
-          <button type="button" className="header__button">
+          <Link to="/upload" className="header__button">
             + UPLOAD
-          </button>
+          </Link>
           <img src={profilePic} className="profile__pic" alt="profilePicture" />
         </div>
       </header>
