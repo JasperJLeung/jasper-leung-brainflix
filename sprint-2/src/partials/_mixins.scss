@@ -17,6 +17,16 @@
     }
 } 
 
+@mixin button{
+    color: $primary-white;
+    background-color: $primary-blue;
+    border-radius: 4px;
+    font-family: $font-demi;
+    border: none;
+    font-size: 14px;
+    line-height: 22px;
+}
+
 
 
 
