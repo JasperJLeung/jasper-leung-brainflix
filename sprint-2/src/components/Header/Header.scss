@@ -2,7 +2,6 @@
 @use '../../partials/variables' as *;
 @use '../../partials/typography' as *;
 
-//Look into wrapping this all into a variable
 * {
     box-sizing: border-box;
     padding: 0;
@@ -21,7 +20,6 @@
     margin: 0;
     width: 100%;
   }
-//Up to here
 
 //header section
 .header {
@@ -59,7 +57,6 @@
         }
      }
 
-
     &__logo {
         height: 100%;
         width: 100%;
@@ -88,7 +85,6 @@
         padding-left: 2rem;
         border: 1px solid $primary-mercury;
         border-radius: 5px;
-        
 
         @include tablet {
             height: 3rem;
@@ -129,7 +125,6 @@
         @include desktop {
             flex: 80%;
             width: 100%;
-            
         }
     }
 
@@ -153,9 +148,9 @@
             font-size: 16px;
             line-height: 24px;
         }
-
     } 
 }
+
 .profile__pic {
         border-radius: 50%;
         height: 3rem;

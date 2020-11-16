@@ -27,7 +27,7 @@
         padding: 0 1rem;
 
         @include tablet {
-            padding: 0 1.5rem;
+            padding: 0;
         }
 
         @include desktop {
@@ -43,6 +43,16 @@
       &__fields {
           width:100%;
           height: auto;
+      }
+
+      &__input-container {
+         @include tablet {
+             padding: 0 1.5rem;
+         }
+
+         @include desktop {
+             padding: 0;
+         }
       }
 
       &__lable-description {
@@ -75,11 +85,15 @@
           @include tablet {
             display: flex;
             flex-direction: row-reverse;
-            width: 100%;
+            border-top: 1px solid $primary-mercury;
+            margin: 0 1.5rem;
+            padding-top: 2.5rem;
           }
-          
-      }
 
+          @include desktop {
+              margin: 0;
+          }
+      }
 
       &__button {
           @include button;
@@ -111,6 +125,5 @@
       @include tablet {
           width: 160px;
           margin-left: 3rem;
-          
       }
   }
