@@ -21,11 +21,13 @@ const UploadForm = (props) => {
                                 <textarea name="upload" className="upload__description upload__description-description" placeholder="Add a description of your video" rows="7" required></textarea>
                             </div>
                         </div>
-                        <div className="publish__button-container">
-                            <button type="submit" className="upload__button upload__button-publish">PUBLISH</button>
-                        </div>
-                        <div className="cancel__button-container">
-                            <button type="submit" className="upload__button-cancel">CANCEL</button>
+                        <div className="upload__button-container">
+                            <div className="publish__button-container">
+                                <button type="submit" className="upload__button upload__button-publish">PUBLISH</button>
+                            </div>
+                            <div className="cancel__button-container">
+                                <button type="submit" className="upload__button-cancel">CANCEL</button>
+                            </div>
                         </div>
                     </div>
              </form>

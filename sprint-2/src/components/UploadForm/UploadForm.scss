@@ -25,6 +25,15 @@
 
     &__info {
         padding: 0 1rem;
+
+        @include tablet {
+            padding: 0 1.5rem;
+        }
+
+        @include desktop {
+            width: 100%;
+            padding: 0 0 0 1.5rem;
+        }
     }
       &__form {
           width: 100%;
@@ -50,14 +59,25 @@
           color: $primary-black;
           width: 100%;
           border-color: $primary-mercury;
+          border-radius: 5px;
       }
 
       &__description-title {
           margin-bottom: 1.5rem;
+          border: 2px solid $primary-mercury;
       }
 
       &__description-description {
           margin-bottom: 2rem;
+      }
+
+      &__button-container {
+          @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+          }
+          
       }
 
 
@@ -81,4 +101,16 @@
   .cancel__button-container {
       display: flex;
       justify-content: center;
+
+      @include tablet {
+         padding-bottom: 1.5rem;
+      }
+  }
+  
+  .publish__button-container {
+      @include tablet {
+          width: 160px;
+          margin-left: 3rem;
+          
+      }
   }

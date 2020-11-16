@@ -21,8 +21,8 @@ class Header extends Component {
           </div>
         </div>
         <div className="header__right">
-          <Link to="/upload" >
-            <button className="header__button"><img src={upload}/>UPLOAD</button>
+          <Link to="/upload" className="header__button">
+             <img src={upload}/>UPLOAD
           </Link>
           <img src={profilePic} className="profile__pic" alt="profilePicture" />
         </div>
