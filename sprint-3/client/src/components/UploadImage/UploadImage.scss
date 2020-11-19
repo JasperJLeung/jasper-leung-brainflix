@@ -1,0 +1,75 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typography' as *;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  .body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+.upload {
+
+    &__container-image {
+        width: 100%;
+        height: auto;
+        padding: 0 1rem;
+
+        @include tablet {
+            padding: 0 1.5rem;
+        }
+        
+        @include desktop {
+            flex: 40%;
+            padding: 0;
+        }
+    }
+
+    &__image-label {
+        width: 100%;
+        height: auto;
+
+        @include tablet {
+            width: 48%;
+        }
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    &__label {
+        font-family: $font-demi;
+        font-size: 14px;
+        line-height: 22px;
+        color: $primary-silver;
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            margin-bottom: 2.5rem;
+        }
+    }
+}

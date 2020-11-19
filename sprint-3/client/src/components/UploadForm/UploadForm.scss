@@ -1,0 +1,129 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typography' as *;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  .body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .upload {
+
+    &__info {
+        padding: 0 1rem;
+
+        @include tablet {
+            padding: 0;
+        }
+
+        @include desktop {
+            width: 100%;
+            padding: 0 0 0 1.5rem;
+        }
+    }
+      &__form {
+          width: 100%;
+          height: auto;
+      }
+
+      &__fields {
+          width:100%;
+          height: auto;
+      }
+
+      &__input-container {
+         @include tablet {
+             padding: 0 1.5rem;
+         }
+
+         @include desktop {
+             padding: 0;
+         }
+      }
+
+      &__lable-description {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+      }
+
+      &__description {
+          font-family: $font-regular;
+          font-size: 13px;
+          line-height: 18px;
+          padding: 0.5rem 1rem;
+          color: $primary-black;
+          width: 100%;
+          border-color: $primary-mercury;
+          border-radius: 5px;
+      }
+
+      &__description-title {
+          margin-bottom: 1.5rem;
+          border: 2px solid $primary-mercury;
+      }
+
+      &__description-description {
+          margin-bottom: 2rem;
+      }
+
+      &__button-container {
+          @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            border-top: 1px solid $primary-mercury;
+            margin: 0 1.5rem;
+            padding-top: 2.5rem;
+          }
+
+          @include desktop {
+              margin: 0;
+          }
+      }
+
+      &__button {
+          @include button;
+          width: 100%;
+          padding: 1rem;
+      }
+
+      &__button-publish {
+          margin-bottom: 1.5rem;
+      }
+      
+      &__button-cancel {
+          @include button;
+          background-color: $primary-white;;
+          color: $primary-blue;
+      }
+  }
+
+  .cancel__button-container {
+      display: flex;
+      justify-content: center;
+
+      @include tablet {
+         padding-bottom: 1.5rem;
+      }
+  }
+  
+  .publish__button-container {
+      @include tablet {
+          width: 160px;
+          margin-left: 3rem;
+      }
+  }

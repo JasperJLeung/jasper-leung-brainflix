@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+@mixin mobile{
+    @media (min-width : $mobile-breakpoint)  {
+        @content;
+    }
+}
+@mixin  tablet{
+    @media (min-width : $tablet-breakpoint)  {
+        @content;
+  }
+}
+
+@mixin  desktop{
+    @media (min-width : $desktop-breakpoint)  {
+        @content;
+    }
+} 
+
+@mixin button{
+    color: $primary-white;
+    background-color: $primary-blue;
+    border-radius: 4px;
+    font-family: $font-demi;
+    border: none;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+
+
+
+
