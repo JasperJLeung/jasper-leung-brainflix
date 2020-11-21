@@ -14,6 +14,7 @@ class Home extends Component {
   }
 
   componentDidMount () {
+    axios.get('http://localhost:8080').then((response) => console.log(response.data))
     axios.get(apiURL + "/videos?api_key=" + apiKey).then((response) => {
       this.setState({
         sideVideo: response.data
