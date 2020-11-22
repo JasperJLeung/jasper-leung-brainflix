@@ -35,7 +35,6 @@
           padding: 0;
       }
 
-
       &__title-container {
           width: 100%;
           padding: 2rem 0 1rem 0;
@@ -77,7 +76,6 @@
           @include tablet {
               padding-bottom: 1.5rem;
           }
-
       }
 
       &__creator {
@@ -135,6 +133,7 @@
               line-height: 22px;
           }
       }
+      
       &__info-container-right {
           display: flex;
           align-items: center;
