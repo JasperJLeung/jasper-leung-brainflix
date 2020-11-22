@@ -2,7 +2,6 @@ import "./Video.scss";
 import play from "../../assets/Icons/SVG/Icon-play.svg";
 import fullscreen from "../../assets/Icons/SVG/Icon-fullscreen.svg";
 import volume from "../../assets/Icons/SVG/Icon-volume.svg";
-import {apiKey} from "../../utils/axios";
 
 const Video = (props) => {
   return (
@@ -10,7 +9,7 @@ const Video = (props) => {
       <div className="main__video-container">
         <video
           className="main__video-playing"
-          src={props.mainVideo.video + "?api_key=" + apiKey}
+          src={props.mainVideo.video}
           poster={props.mainVideo.image}
         ></video>
         <div className="main__video-controls-container">

@@ -5,44 +5,46 @@ import Comments from '../../components/Comments/Comments';
 import VideoQueue from '../../components/VideoQueue/VideoQueue';
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import axios from 'axios';
-import {apiKey, apiURL} from "../../utils/axios";
+import {apiURL} from "../../utils/axios";
 
 class Home extends Component {
   state = {
     mainVideo: {},
     sideVideo: []
-  }
+  };
 
-  componentDidMount () {
-    axios.get('http://localhost:8080').then((response) => console.log(response.data))
-    axios.get(apiURL + "/videos?api_key=" + apiKey).then((response) => {
+  fetchVideos = () => {
+    axios.get(apiURL + "/videos").then((response) => {
       this.setState({
         sideVideo: response.data
       }, () => {
-        axios.get(apiURL + "/videos/" + this.state.sideVideo[0].id +"?api_key=" + apiKey).then((response) => {
-          this.setState({
-            mainVideo: response.data
-          })
-        })
+      
+        this.fetchMainVideo( this.state.sideVideo[0].id)
+
+
       })
     }).catch((error) => console.log(error))
   }
 
+  fetchMainVideo = (id) => {
+  axios.get(apiURL + "/videos/"+id).then((response) => {
+          this.setState({
+            mainVideo: response.data
+          })
+        })
+  }
+
+  componentDidMount () {
+   this.fetchVideos()
+  }
+
   componentDidUpdate() {
     if(this.props.match.params.id  && this.props.match.params.id !== this.state.mainVideo.id){
-      axios.get(apiURL + "/videos/" + this.props.match.params.id +"?api_key=" + apiKey).then((response) => {
-        this.setState({
-          mainVideo: response.data
-        })
-      }) 
+     this.fetchMainVideo(this.props.match.params.id)
       window.scrollTo(0,0)
     }
      if(this.props.match.path === "/" && this.state.mainVideo.id !== this.state.sideVideo[0].id){
-      axios.get(apiURL + "/videos/" + this.state.sideVideo[0].id +"?api_key=" + apiKey).then((response) => {
-        this.setState({
-          mainVideo: response.data
-        })
-      }) 
+      this.fetchMainVideo(this.state.sideVideo[0].id)
     }
   } 
 

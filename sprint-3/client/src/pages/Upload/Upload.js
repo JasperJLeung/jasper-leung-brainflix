@@ -3,16 +3,29 @@ import Header from '../../components/Header/Header'
 import UploadImage from '../../components/UploadImage/UploadImage'
 import UploadForm from '../../components/UploadForm/UploadForm';
 import "./Upload.scss";
+import axios from 'axios';
 
 class Upload extends Component {
     state = {
-        title: "",
-        description: "",
         redirect: false
     }
-    onSubmitForm = (event) => {
-        event.target.reset();
-        this.setState({
+
+    postNewVideo = (event) => {
+        axios.post(
+            "http://localhost:8080/videos", {
+                title: event.target.title.value,
+                description: event.target.upload.value,
+        comments: [],
+        channel: "BrainStation",
+        image: "http://localhost:8080/Upload-video-preview.jpg",
+        views: 0,
+        likes: 0,
+        duration: "0:42",
+        video: "http://localhost:8080/BrainStationSampleVideo.mp4",
+        timestamp: new Date().getTime(),
+            }
+        ).then(() => { 
+            this.setState({
             title: event.target.title.value,
             description: event.target.upload.value
         }, () => {
@@ -20,8 +33,15 @@ class Upload extends Component {
                 redirect: true
             })
             this.props.history.push("/");
+            })
         })
     }
+    onSubmitForm = (video) => {
+        this.postNewVideo(video)
+
+        video.target.reset();
+    }
+
     render() {
         return (
             <>
