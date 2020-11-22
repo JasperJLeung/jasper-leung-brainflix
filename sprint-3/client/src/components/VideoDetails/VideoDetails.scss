@@ -54,6 +54,10 @@
               font-size: 36px;
               line-height: 44px;
           }
+
+          @include desktop {
+              padding-top: 2.5rem;
+          }
       }
 
       &__subinfo-container {
@@ -134,6 +138,10 @@
       &__info-container-right {
           display: flex;
           align-items: center;
+
+          @include desktop {
+              margin-right: 1rem;
+          }
       }
 
       &__likes {

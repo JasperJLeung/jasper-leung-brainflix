@@ -108,7 +108,13 @@
       &__button-cancel {
           @include button;
           background-color: $primary-white;;
-          color: $primary-blue;
+          color: $primary-blue!important;
+          text-decoration: none;
+          padding-bottom: 1rem;
+
+          @include tablet {
+              padding-top: 1rem;
+          }
       }
   }
 

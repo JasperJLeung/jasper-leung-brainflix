@@ -108,12 +108,11 @@
 
       &__comment {
           width: 100%;
-          padding: 1rem;
+          padding: 0.8rem;
           font-family: $font-regular;
           font-size: 13px;
           line-height: 18px;
-          border: 1px solid $primary-silver;
-        //   border: 2px solid $primary-blue;
+          border: 1px solid $primary-mercury;
           border-radius: 5px;
 
           @include tablet {

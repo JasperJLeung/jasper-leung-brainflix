@@ -1,0 +1,11 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typography' as *;
+
+.app {
+    &__bottom-container-section {
+        @include desktop {
+            border-right: 1px solid $primary-mercury;
+        }
+    }
+}

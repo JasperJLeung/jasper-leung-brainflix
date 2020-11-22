@@ -16,8 +16,12 @@ const NextVideo = (props) => {
        
       </div>
       <div className="next-video__info">
+      <Link to={"/" + props.video.id} className="next-video__link">
         <span className="next-video__title">{props.video.title}</span>
-        <span className="next-video__channel">{props.video.channel}</span>
+      </Link>
+      <Link to={"/" + props.video.id} className="next-video__link">
+        <span className="next-video__channel" >{props.video.channel}</span>
+      </Link>
       </div>
     </div>
   );

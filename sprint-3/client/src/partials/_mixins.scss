@@ -17,6 +17,24 @@
     }
 } 
 
+@mixin link{
+a:link {
+    color: $primary-black;
+  }
+  
+  a:visited {
+    color: $primary-black;
+  }
+  
+  a:hover {
+    color: $primary-black;
+  }
+  
+  a:active {
+    color: $primary-black;
+  }
+}
+
 @mixin button{
     color: $primary-white;
     background-color: $primary-blue;
@@ -26,7 +44,6 @@
     font-size: 14px;
     line-height: 22px;
 }
-
 
 
 

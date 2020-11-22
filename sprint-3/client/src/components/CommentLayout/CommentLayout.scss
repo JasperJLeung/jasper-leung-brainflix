@@ -91,6 +91,10 @@
         font-size: 14px;
         line-height: 22px;
         font-weight: lighter;
+
+        @include desktop {
+            margin-right: 1rem;
+        }
     }
 
     &__section-linebreak{

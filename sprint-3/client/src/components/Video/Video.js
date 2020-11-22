@@ -5,7 +5,7 @@ import volume from "../../assets/Icons/SVG/Icon-volume.svg";
 
 const Video = (props) => {
   return (
-    <section className="main__video">
+    <main className="main">
       <div className="main__video-container">
         <video
           className="main__video-playing"
@@ -26,7 +26,7 @@ const Video = (props) => {
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

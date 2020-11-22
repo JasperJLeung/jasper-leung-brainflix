@@ -1,5 +1,6 @@
 import React from 'react';
 import './UploadForm.scss';
+import {Link} from 'react-router-dom';
 
 const UploadForm = (props) => {
 
@@ -26,7 +27,7 @@ const UploadForm = (props) => {
                                 <button type="submit" className="upload__button upload__button-publish">PUBLISH</button>
                             </div>
                             <div className="cancel__button-container">
-                                <button type="submit" className="upload__button-cancel">CANCEL</button>
+                                <Link to="/" className="upload__button-cancel">CANCEL</Link>
                             </div>
                         </div>
                     </div>

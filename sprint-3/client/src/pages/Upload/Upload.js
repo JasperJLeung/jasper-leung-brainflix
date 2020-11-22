@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../../components/Header/Header'
 import UploadImage from '../../components/UploadImage/UploadImage'
 import UploadForm from '../../components/UploadForm/UploadForm';
 import "./Upload.scss";
@@ -15,19 +14,19 @@ class Upload extends Component {
             "http://localhost:8080/videos", {
                 title: event.target.title.value,
                 description: event.target.upload.value,
-        comments: [],
-        channel: "BrainStation",
-        image: "http://localhost:8080/Upload-video-preview.jpg",
-        views: 0,
-        likes: 0,
-        duration: "0:42",
-        video: "http://localhost:8080/BrainStationSampleVideo.mp4",
-        timestamp: new Date().getTime(),
+                comments: [],
+                channel: "BrainStation",
+                image: "http://localhost:8080/Upload-video-preview.jpg",
+                views: 0,
+                likes: 0,
+                duration: "0:42",
+                video: "http://localhost:8080/BrainStationSampleVideo.mp4",
+                timestamp: new Date().getTime(),
             }
         ).then(() => { 
             this.setState({
-            title: event.target.title.value,
-            description: event.target.upload.value
+                title: event.target.title.value,
+                description: event.target.upload.value
         }, () => {
             this.setState({
                 redirect: true
@@ -35,17 +34,16 @@ class Upload extends Component {
             this.props.history.push("/");
             })
         })
-    }
+    };
+
     onSubmitForm = (video) => {
         this.postNewVideo(video)
-
-        video.target.reset();
-    }
+            video.target.reset();
+    };
 
     render() {
         return (
             <>
-            <Header />
             <div className="upload">
                 <div className="upload__header-container">
                     <h1 className="upload__header">Upload Video</h1>

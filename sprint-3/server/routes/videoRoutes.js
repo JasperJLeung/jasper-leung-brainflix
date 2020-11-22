@@ -28,7 +28,6 @@ route.get("/:id", (req, res) => {
 
 route.post("/", (req, res) => {
     const data = JSON.parse(fs.readFileSync('./data/database.json', "utf-8"));
-    console.log(req.body)
     const video = {
         id: uuidv4(),
         title: req.body.title,
@@ -45,7 +44,7 @@ route.post("/", (req, res) => {
     data.push(video);
     fs.writeFileSync('./data/database.json', JSON.stringify(data, null, 2));
     res.status(200).json(video);
-})
+});
 
 
 module.exports = route;

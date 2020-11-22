@@ -21,6 +21,8 @@
   width: 100%;
 }
 
+@include link;
+
 .next-video {
   width: 18rem;
   display: flex;
@@ -42,6 +44,10 @@
     height: 4.375rem;
     object-fit: cover;
     border-radius: 5px;
+  }
+
+  &__link {
+    text-decoration: none;
   }
 
   &__info {
@@ -69,7 +75,6 @@
       font-family: $font-regular;
       font-size: 14px;
       line-height: 22px;
-
       
       @include tablet {
         font-size: 16px;
